@@ -86,5 +86,5 @@ app.MapGet("/tasks/{id}", async (int id, ToDoDbContext context) =>
 
 
 app.MapGet("/", () => "TodoApi is running");
-// app.UseAuthentication();
+
 app.Run();
