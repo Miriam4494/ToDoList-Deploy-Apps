@@ -32,13 +32,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 app.UseSwagger();
-
-// הפעלת Swagger UI
-app.UseSwaggerUI(options =>
-{
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDo API v1");
-    options.RoutePrefix = string.Empty;
-});
+app.UseSwaggerUI();
 
 // הפעלת מדיניות CORS
 app.UseCors("AllowSpecificOrigins");
