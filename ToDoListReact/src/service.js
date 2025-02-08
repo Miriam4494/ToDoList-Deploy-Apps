@@ -21,7 +21,7 @@ export default {
   getTasks: async () => {
     try {
       const result = await axios.get('/tasks');
-      return Array.isArray(result.data) ? result.data : [];
+      return  result.data;
     } catch (error) {
       alert("Failed to load tasks.");
       return [];
