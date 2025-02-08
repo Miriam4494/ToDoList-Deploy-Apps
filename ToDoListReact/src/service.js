@@ -16,10 +16,6 @@ axios.interceptors.response.use(
   }
 );
 
-var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
-
 export default {
   // שליפת כל המשימות
   getTasks: async () => {
