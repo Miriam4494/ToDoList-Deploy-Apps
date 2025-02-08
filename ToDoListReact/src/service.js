@@ -18,12 +18,13 @@ axios.interceptors.response.use(
 
 export default {
   // שליפת כל המשימות
+
   getTasks: async () => {
-    try {
-      const result = await axios.get('/tasks');
-      return  result.data;
-    } catch (error) {
-      alert("Failed to load tasks.");
+    const result = await axios.get('/tasks');
+    if (Array.isArray(result.data))
+    return result.data
+    else {
+      alert("no tasks");
       return [];
     }
   },
